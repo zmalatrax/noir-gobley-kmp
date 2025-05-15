@@ -1,0 +1,16 @@
+[package]
+name = "compose-app"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+uniffi = "0.28.3"
+noir = { git = "https://github.com/zkmopro/noir-rs", features = ["barretenberg", "android-compat"] }
+serde_json = "1.0.140"
+thiserror = "2.0.12"
+# noir = { git = "https://github.com/zkmopro/noir-rs", features = ["barretenberg"] }
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+# Put this only if you moved lib.rs.
+path = "src/commonMain/rust/lib.rs"
