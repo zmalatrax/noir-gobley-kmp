@@ -33,6 +33,11 @@ The business logic and the UI are shared in commonMain, written in Kotlin, with 
 While all the targets were working when doing the tutorial, when integrating the noir-rs library,
 the compilation got all messed up. So currently, **only** the Android build targetting ARM64-V8A is working, I've removed the iOS target from `build.gradle.kts` and restrained the Android ABIs to arm64-V8a.
 
+#### Rust Library
+
+- UniFFI does not support `Option<String>` for errors, only `enum errors`, hence the mapping of option to custom enum errors in the library.
+- Gobley v0.2.0 only works with uniffi v0.28, but the version v0.29 is available, if not using Gobley, and solely UniFFI to generate the Kotlin/Swift bindings, you should update the UniFFI version.
+
 ### Issues encountered
 
 - If you have issues saying that "barretenberg" is not available/found", clean your build with `./gradlew clean` at the root of the project.
