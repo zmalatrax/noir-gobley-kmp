@@ -22,6 +22,8 @@ I've followed [this tutorial](https://gobley.dev/docs/tutorial/) to setup Gobley
 
 The Rust lib to generate and verify Noir proof is inspired by [MoPro](https://github.com/zkmopro/mopro/tree/main), using [noir-rs](https://github.com/zkmopro/noir-rs/tree/main) (which is pretty similar to [noir_rs](https://github.com/zkpassport/noir_rs/tree/main) by ZkPassport).
 
+The Rust library is located in `commonMain`, the `Cargo.toml` being at the root of this folder and, the `lib.rs` at `commonMain/rust/lib.rs`.
+
 ### Setup
 
 If you want to run this project, make sure to have the NDK installed (in Android Studio, go to Tools > SDK Manager > SDK Tools, and enable "NKD (side by side)").
